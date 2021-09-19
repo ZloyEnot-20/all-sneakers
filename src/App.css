@@ -1,0 +1,24 @@
+.App {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    text-align: left;
+}
+
+.wrapper {
+    width: 900px;
+    height: 1526px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+hr {
+    border-color: #fdfcfc;
+    border-width: 1px;
+}
