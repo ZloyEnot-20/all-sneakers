@@ -13,11 +13,8 @@ function App() {
     return (
         <Router>
             <div className="App">
+                <Cart cartIsOpen={cartIsOpen} setCartIsOpen={setCartIsOpen} />
                 <div className="wrapper">
-                    <Cart
-                        cartIsOpen={cartIsOpen}
-                        setCartIsOpen={setCartIsOpen}
-                    />
                     <Header setCartIsOpen={setCartIsOpen} />
                     <hr />
                     <Switch>

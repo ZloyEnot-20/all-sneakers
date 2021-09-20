@@ -10,10 +10,9 @@ export const removeFromCart = (action) => {
         payload: action,
     };
 };
-export const GET_GOODS = (action) => {
+export const clearCart = () => {
     return {
-        type: "GET_GOODS",
-        payload: action,
+        type: "CLEAR_CART",
     };
 };
 export const addFavorite = (action) => {

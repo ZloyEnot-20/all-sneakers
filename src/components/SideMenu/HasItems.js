@@ -1,6 +1,10 @@
 import React from "react";
 import { ReactComponent as Close } from "../SVG/close.svg";
-const HasItems = ({ items, removeItem, cost }) => {
+const HasItems = ({ items, removeItem, cost, setPurchased }) => {
+    const handleBook = () => {
+        setPurchased((prev) => !prev);
+    };
+
     return (
         <>
             <div className="cart__title">
@@ -40,7 +44,12 @@ const HasItems = ({ items, removeItem, cost }) => {
                     <span className="cart__footer-line"></span>
                     <span className="cart__footer-price">{cost} RUB</span>
                 </div>
-                <button className="cart__button">Оформить заказ</button>
+                <button
+                    className="cart__button"
+                    onClick={() => setPurchased((prev) => !prev)}
+                >
+                    Оформить заказ
+                </button>
             </div>
         </>
     );

@@ -7,10 +7,10 @@ import { ReactComponent as Liked } from "../SVG/Liked.svg";
 import { addToCart, addFavorite, removeFavorite } from "../../actions";
 import { useDispatch } from "react-redux";
 
-const Card = ({ id, price, title, img }) => {
+const Card = ({ id, price, title, img, like }) => {
     const dispatch = useDispatch();
     const [added, setAdded] = React.useState(false);
-    const [liked, setLiked] = React.useState(false);
+    const [liked, setLiked] = React.useState(like || false);
 
     const handleLiked = () => {
         if (!liked) {
@@ -20,7 +20,7 @@ const Card = ({ id, price, title, img }) => {
                     title,
                     price,
                     id,
-                    liked: true,
+                    liked: !liked,
                 })
             );
             setLiked((prev) => !prev);

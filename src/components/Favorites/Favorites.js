@@ -29,6 +29,7 @@ const Favorites = () => {
                                 key={item.id + Math.random()}
                                 title={item.title}
                                 img={item.img}
+                                like={item.liked}
                             />
                         );
                     })
