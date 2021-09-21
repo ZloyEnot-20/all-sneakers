@@ -9,7 +9,7 @@ import Purchased from "./components/Purchased/Purchased";
 
 function App() {
     const [cartIsOpen, setCartIsOpen] = React.useState(true);
-
+    
     return (
         <Router>
             <div className="App">

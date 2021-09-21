@@ -17,7 +17,7 @@ const Favorites = () => {
                         <Back />
                     </Link>
                 </div>
-                <span className="favorites__header-title">Moи, закладки</span>
+                <span className="favorites__header-title">Moи закладки</span>
             </div>
             <div className="favorites__items">
                 {likedItems.length ? (

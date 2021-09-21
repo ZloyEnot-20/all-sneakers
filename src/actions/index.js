@@ -27,3 +27,9 @@ export const removeFavorite = (action) => {
         payload: action,
     };
 };
+export const addPurchased = (action) => {
+    return {
+        type: "ADD_PURCHASED",
+        payload: action,
+    };
+};

@@ -1,8 +1,17 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addPurchased } from "../../actions";
 import { ReactComponent as Close } from "../SVG/close.svg";
+
 const HasItems = ({ items, removeItem, cost, setPurchased }) => {
-    const handleBook = () => {
+    const chosenItems = useSelector((state) => state.cart);
+
+    const dispatch = useDispatch();
+
+    const handlePurchased = () => {
         setPurchased((prev) => !prev);
+        dispatch(addPurchased(chosenItems));
+        console.log(chosenItems);
     };
 
     return (
@@ -44,10 +53,7 @@ const HasItems = ({ items, removeItem, cost, setPurchased }) => {
                     <span className="cart__footer-line"></span>
                     <span className="cart__footer-price">{cost} RUB</span>
                 </div>
-                <button
-                    className="cart__button"
-                    onClick={() => setPurchased((prev) => !prev)}
-                >
+                <button className="cart__button" onClick={handlePurchased}>
                     Оформить заказ
                 </button>
             </div>

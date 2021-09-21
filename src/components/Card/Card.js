@@ -41,7 +41,7 @@ const Card = ({ id, price, title, img, like }) => {
                 img,
                 title,
                 price,
-                id: Math.random(),
+                id,
             })
         );
     };

@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart } from "../../actions";
 import CartInfo from "./CartInfo";
 import HasItems from "./HasItems";
-import ItemPurchased from "./ItemPurchased/ItemPurchased";
 
 const Cart = ({ cartIsOpen, setCartIsOpen }) => {
     const [purchased, setPurchased] = React.useState(false);
@@ -44,7 +43,7 @@ const Cart = ({ cartIsOpen, setCartIsOpen }) => {
                     <CartInfo
                         setCartIsOpen={setCartIsOpen}
                         status="Заказ оформлен!"
-                        description={`Ваш заказ #25 скоро будет передан курьерской доставке`}
+                        description={`Ваш заказ #25 на сумму ${cost} RUB скоро будет передан курьерской доставке`}
                         image="img/booked.png"
                         setPurchased={setPurchased}
                     />
@@ -62,8 +61,3 @@ const Cart = ({ cartIsOpen, setCartIsOpen }) => {
 };
 
 export default Cart;
-
-// <>
-//     <Empty />
-//     {console.log("HERE", cartIsOpen)}
-// </>

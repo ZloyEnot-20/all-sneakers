@@ -43,7 +43,9 @@ const Header = ({ setCartIsOpen }) => {
                         </Link>
                     </div>
                     <div className="header__user-info">
-                        <Union className="header__union tabs" />
+                        <Link to="/purchased">
+                            <Union className="header__union tabs" />
+                        </Link>
                     </div>
                 </div>
             </div>
